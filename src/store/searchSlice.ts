@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-import { Pokemon } from "@/types";
+import { InitialData } from "@/types";
 
 export interface SearchState {
   search: string;
-  startupPokemon: Pokemon[];
+  startupPokemon: InitialData[];
 }
 
 const initialState: SearchState = {
@@ -20,11 +20,11 @@ const searchSlice = createSlice({
     setSearch: (state, action: PayloadAction<string>) => {
       state.search = action.payload;
     },
-    setStartupPokemon: (state, action: PayloadAction<Pokemon[]>) => {
+    setInitialData: (state, action: PayloadAction<InitialData[]>) => {
       state.startupPokemon = action.payload;
     },
   },
 });
 
-export const { setSearch, setStartupPokemon } = searchSlice.actions;
+export const { setSearch, setInitialData } = searchSlice.actions;
 export default searchSlice.reducer;

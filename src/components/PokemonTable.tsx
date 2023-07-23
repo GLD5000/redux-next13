@@ -1,6 +1,6 @@
-import { Pokemon } from "@/types";
+import { InitialData } from "@/types";
 
-const PokemonTable = ({ pokemons }: { pokemons: Pokemon[] }) => {
+const PokemonTable = ({ pokemons }: { pokemons: InitialData[] }) => {
   return (
     <table>
       <thead>

@@ -4,7 +4,8 @@ import PokemonTable from "./PokemonTable";
 
 function SSRPokemonTable() {
   return (
-    <div>
+    <div className="grid w-fit mx-auto my-10 gap-4">
+      SSR Table
       <PokemonTable pokemons={store.getState().search.startupPokemon} />
     </div>
   );
